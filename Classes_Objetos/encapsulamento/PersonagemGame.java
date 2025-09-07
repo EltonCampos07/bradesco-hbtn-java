@@ -10,7 +10,7 @@ public class PersonagemGame {
         this.saudeAtual = saudeAtual;
     }
 
-    public String  getNome() {
+    public String getNome() {
         return this.nome;
     }
 
