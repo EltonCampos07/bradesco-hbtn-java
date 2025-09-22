@@ -27,7 +27,7 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public Boolean getPremium() {
+    public Boolean isPremium() {
         return premium;
     }
 
