@@ -5,9 +5,9 @@ public class Pessoa {
     private String nome;
     private String cargo;
     private int idade;
-    private int salario;
+    private double salario;
 
-    public Pessoa(int codigo, String nome, String cargo, int idade, int salario) {
+    public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
         this.codigo = codigo;
         this.nome = nome;
         this.cargo = cargo;
@@ -47,7 +47,7 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public int getSalario() {
+    public double getSalario() {
         return salario;
     }
 
@@ -57,6 +57,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return String.format(Locale.forLanguageTag("pt-BR"), "[%d] %s %s %s R$ %d", codigo, nome, cargo, idade, salario);
+        return String.format(Locale.forLanguageTag("pt-BR"), "[%d] %s %s %d R$ %.6f", codigo, nome, cargo, idade,
+                salario);
     }
 }
