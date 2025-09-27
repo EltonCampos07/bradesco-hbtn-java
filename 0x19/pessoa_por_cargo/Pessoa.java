@@ -1,13 +1,13 @@
 import java.util.Locale;
 
 public class Pessoa {
-    private Integer codigo;
+    private int codigo;
     private String nome;
     private String cargo;
-    private Integer idade;
-    private Integer salario;
+    private int idade;
+    private int salario;
 
-    public Pessoa(Integer codigo, String nome, String cargo, Integer idade, Integer salario) {
+    public Pessoa(int codigo, String nome, String cargo, int idade, int salario) {
         this.codigo = codigo;
         this.nome = nome;
         this.cargo = cargo;
@@ -15,11 +15,11 @@ public class Pessoa {
         this.salario = salario;
     }
 
-    public Integer getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -39,19 +39,19 @@ public class Pessoa {
         this.cargo = cargo;
     }
 
-    public Integer getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 
-    public Integer getSalario() {
+    public int getSalario() {
         return salario;
     }
 
-    public void setSalario(Integer salario) {
+    public void setSalario(int salario) {
         this.salario = salario;
     }
 
