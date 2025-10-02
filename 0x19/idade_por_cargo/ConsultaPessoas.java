@@ -9,12 +9,12 @@ public class ConsultaPessoas {
                 .collect(Collectors.groupingBy(Pessoa::getCargo));
     }
 
-    public static Map<String, List<Pessoa>> obterPessoasPorCargoAcimaDe40anos(List<Pessoa> listaPessoa) {
+    public static Map<String, List<Integer>> obterIdadePorCargo(List<Pessoa> listaPessoa) {
         return listaPessoa.stream()
                 .collect(Collectors.groupingBy(
                     Pessoa::getCargo,
-                    Collectors.filtering(
-                        pessoa -> pessoa.getIdade() > 40,
+                    Collectors.mapping(
+                        Pessoa::getIdade,
                         Collectors.toList()
                     )
                 ));
