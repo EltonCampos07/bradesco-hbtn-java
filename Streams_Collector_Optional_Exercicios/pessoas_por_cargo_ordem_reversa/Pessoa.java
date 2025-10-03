@@ -41,6 +41,7 @@ public class Pessoa implements Comparable<Pessoa> {
         NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("pt-BR"));
         formatter.setMinimumFractionDigits(6);
         formatter.setMaximumFractionDigits(6);
+        formatter.setGroupingUsed(false);
         return String.format("[%d] %s %s %d %s",
                 codigo, nome, cargo, idade, formatter.format(salario));
     }
