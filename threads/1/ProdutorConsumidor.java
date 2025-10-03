@@ -15,7 +15,5 @@ public class ProdutorConsumidor {
             e.printStackTrace();
         }
 
-        System.out.println("Producao e consumo finalizados!");
-
     }
 }
