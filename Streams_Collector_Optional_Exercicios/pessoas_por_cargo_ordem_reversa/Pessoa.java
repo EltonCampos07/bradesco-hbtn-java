@@ -7,7 +7,7 @@ public class Pessoa implements Comparable<Pessoa> {
     private String cargo;
     private int idade;
     private double salario;
-    
+
     public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
         this.codigo = codigo;
         this.nome = nome;
@@ -15,34 +15,36 @@ public class Pessoa implements Comparable<Pessoa> {
         this.idade = idade;
         this.salario = salario;
     }
-    
+
     public int getCodigo() {
         return codigo;
     }
-    
+
     public String getNome() {
         return nome;
     }
-    
+
     public String getCargo() {
         return cargo;
     }
-    
+
     public int getIdade() {
         return idade;
     }
-    
+
     public double getSalario() {
         return salario;
     }
-    
+
     @Override
     public String toString() {
         NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("pt-BR"));
-        return String.format("[%d] %s %s %d %s", 
-            codigo, nome, cargo, idade, formatter.format(salario));
+        formatter.setMinimumFractionDigits(6);
+        formatter.setMaximumFractionDigits(6);
+        return String.format("[%d] %s %s %d %s",
+                codigo, nome, cargo, idade, formatter.format(salario));
     }
-    
+
     @Override
     public int compareTo(Pessoa other) {
         return this.nome.compareTo(other.nome);
