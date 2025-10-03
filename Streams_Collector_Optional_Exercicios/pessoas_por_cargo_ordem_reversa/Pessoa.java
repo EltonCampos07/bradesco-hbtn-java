@@ -1,6 +1,3 @@
-import java.text.NumberFormat;
-import java.util.Locale;
-
 public class Pessoa implements Comparable<Pessoa> {
     private int codigo;
     private String nome;
@@ -38,12 +35,7 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public String toString() {
-        NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("pt-BR"));
-        formatter.setMinimumFractionDigits(6);
-        formatter.setMaximumFractionDigits(6);
-        formatter.setGroupingUsed(false);
-        return String.format("[%d] %s %s %d %s",
-                codigo, nome, cargo, idade, formatter.format(salario));
+        return String.format("[%d] %s %s %d R$ %.6f", codigo, nome, cargo, idade, salario);
     }
 
     @Override
