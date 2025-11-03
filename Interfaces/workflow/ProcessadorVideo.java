@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProcessadorVideo {
-    private final List<CanalNotificacao> canais;
+    private final ArrayList<CanalNotificacao> canais;
 
     public ProcessadorVideo(){
         this.canais = new ArrayList<>();
