@@ -1,5 +1,3 @@
-package Interfaces_Exercicios.workflow;
-
 import Interfaces_Exercicios.workflow.atividades.Atividade;
 
 import java.util.ArrayList;
