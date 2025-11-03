@@ -1,0 +1,8 @@
+# adicionar ao .gitignore
+echo ".idea/" >> .gitignore
+
+# se já estiver versionado, remover do índice (não apaga localmente) e commitar
+git rm -r --cached .idea
+git add .gitignore
+git commit -m "Ignorar pasta .idea"
+git push
