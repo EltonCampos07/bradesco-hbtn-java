@@ -12,4 +12,9 @@ public class JadLog implements ProvedorFrete {
                 : valor * PERCENTUAL_SER_PAGO_PESO_ATE_2KG;
         return new Frete(valorFrete, TipoProvedorFrete.JADLOG);
     }
+
+    @Override
+    public TipoProvedorFrete obterTipoProvedorFrete() {
+        return TipoProvedorFrete.JADLOG;
+    }
 }

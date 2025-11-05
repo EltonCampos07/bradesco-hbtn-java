@@ -12,4 +12,9 @@ public class Sedex implements ProvedorFrete{
                 : valor * PERCENTUAL_SER_PAGO_PESO_ATE_1KG;
         return new Frete(valorFrete, TipoProvedorFrete.SEDEX);
     }
+
+    @Override
+    public TipoProvedorFrete obterTipoProvedorFrete() {
+        return TipoProvedorFrete.SEDEX;
+    }
 }

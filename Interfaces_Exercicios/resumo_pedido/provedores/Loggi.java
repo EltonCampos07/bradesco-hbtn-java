@@ -12,4 +12,9 @@ public class Loggi implements ProvedorFrete{
                 : valor * PERCENTUAL_SER_PAGO_PESO_ATE_5KG;
         return new Frete(valorFrete, TipoProvedorFrete.LOGGI);
     }
+
+    @Override
+    public TipoProvedorFrete obterTipoProvedorFrete() {
+        return TipoProvedorFrete.LOGGI;
+    }
 }
