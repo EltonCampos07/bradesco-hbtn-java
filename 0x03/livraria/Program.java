@@ -1,9 +1,8 @@
-package livraria;
 
 import java.util.Locale;
 
 public class Program {
-    public static void main(String[] var0) {
+    public static void main(String[] args) {
         try {
             Livro var1 = new Livro("As barbas do imperador: D. Pedro II", "Lilia Moritz Schwarcz", (double)56.0F);
             System.out.printf(new Locale("pt", "BR"), "Titulo: %s - Autor: %s - Preco: %.2f\n", var1.getTitulo(), var1.getAutor(), var1.getPreco());
@@ -38,6 +37,5 @@ public class Program {
         } catch (Exception var2) {
             System.out.println(var2.getMessage() + "\n");
         }
-
     }
 }

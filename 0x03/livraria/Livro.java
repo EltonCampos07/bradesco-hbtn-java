@@ -1,9 +1,5 @@
-package livraria;
+ public class Livro {
 
-import livraria.exceptions.AutorInvalidoException;
-import livraria.exceptions.LivroInvalidoException;
-
-public class Livro {
     private String titulo;
     private String autor;
     private double preco;
@@ -18,7 +14,7 @@ public class Livro {
         return this.titulo;
     }
 
-    public void setTitulo(String var1) throws LivroInvalidoException {
+     public void setTitulo(String var1) throws LivroInvalidoException {
         if (var1 != null && var1.trim().length() >= 3) {
             this.titulo = var1;
         } else {
@@ -54,4 +50,5 @@ public class Livro {
             this.preco = var1;
         }
     }
+    
 }
