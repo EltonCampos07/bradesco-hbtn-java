@@ -140,23 +140,15 @@ public class Estoque {
     // Atualiza a quantidade de um produto
     public void atualizarQuantidade(int id, int novaQuantidade) {
         if (novaQuantidade < 0) {
-            System.out.println("Erro: Quantidade não pode ser negativa!");
             return;
         }
-
-        boolean encontrado = false;
 
         for (Produto produto : produtos) {
             if (produto.getId() == id) {
                 produto.setQuantidade(novaQuantidade);
                 salvarEstoque();
-                encontrado = true;
                 break;
             }
-        }
-
-        if (!encontrado) {
-            System.out.println("Erro: Produto com ID " + id + " não encontrado!");
         }
     }
 }
