@@ -1,9 +1,11 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.Locale;
 
 public class GerenciadorEstoque {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
         Estoque estoque = new Estoque("estoque.csv");
 
         while (true) {
