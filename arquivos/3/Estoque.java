@@ -129,7 +129,6 @@ public class Estoque {
     // Exibe todos os produtos
     public void exibirEstoque() {
         if (produtos.isEmpty()) {
-            System.out.println("Estoque vazio!");
             return;
         }
 
