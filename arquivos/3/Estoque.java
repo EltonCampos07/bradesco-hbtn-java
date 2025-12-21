@@ -107,20 +107,15 @@ public class Estoque {
 
     // Exclui um produto pelo ID
     public void excluirProduto(int id) {
-        boolean encontrado = false;
 
         for (int i = 0; i < produtos.size(); i++) {
             if (produtos.get(i).getId() == id) {
                 produtos.remove(i);
                 salvarEstoque();
-                encontrado = true;
                 break;
             }
         }
 
-        if (!encontrado) {
-            System.out.println("Erro: Produto com ID " + id + " não encontrado!");
-        }
     }
 
     // Exibe todos os produtos
