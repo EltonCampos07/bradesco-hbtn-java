@@ -79,20 +79,17 @@ public class Estoque {
 
     // Adiciona um novo produto
     public void adicionarProduto(String nome, int quantidade, double preco) {
+
         // Validações
-        if (nome == null || nome.trim().isEmpty()) {
-            System.out.println("Erro: Nome do produto não pode ser vazio!");
-            return;
-        }
+        if (nome == null || nome.trim().isEmpty()) return;
 
-        if (quantidade < 0) {
-            System.out.println("Erro: Quantidade não pode ser negativa!");
-            return;
-        }
+        if (quantidade < 0) return;
 
-        if (preco < 0) {
-            System.out.println("Erro: Preço não pode ser negativo!");
-            return;
+        if (preco < 0) return;
+
+        // Verifica se já existe um produto com o mesmo nome
+        for (Produto p : produtos) {
+            if (p.getNome().equalsIgnoreCase(nome.trim())) return;
         }
 
         // Gera um novo ID único
